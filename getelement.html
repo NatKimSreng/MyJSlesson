@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Hello</p>
+    <p id="hi">Hi</p>
+    <button onclick='document.getElementById("hi").innerHTML="Hello again"'>
+      Click Here
+    </button>
+    <p id="js">I love java script</p>
+    <button onclick='document.getElementById("js").style.fontSize="30px"'>
+      Click
+    </button>
+    <p>On img</p>
+    <button
+      onclick='document.getElementById("img").src="https://i.pinimg.com/736x/c3/87/f4/c387f43df9c6e1fb99b67db50604576a.jpg"'
+    >
+      Click anya happy
+    </button>
+    <img
+      id="img"
+      src="https://i.pinimg.com/736x/c3/87/f4/c387f43df9c6e1fb99b67db50604576a.jpg"
+      alt="Image"
+    />
+    <button
+      onclick="document.getElementById('img').src='https://i.pinimg.com/736x/74/09/47/74094758d7c29458dab6ada017e90bb0.jpg'"
+    >
+      anya sad
+    </button>
+    <p>And</p>
+    <p id="bye">Bye bye</p>
+    <script>
+      document.getElementById("bye").innerHTML = "thanks you";
+      window.alert("dont forget to take care your self!");
+    </script>
+  </body>
+</html>
