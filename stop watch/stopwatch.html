@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Stopwatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .pulse {
+            animation: pulse 1.5s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div id="stopwatch-container" class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <div id="display" class="text-5xl font-mono font-bold text-center text-gray-800 mb-4">00:00:00.000</div>
+        <div class="flex justify-center space-x-2 mb-4">
+            <button id="startBtn" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition">Start</button>
+            <button id="stopBtn" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition">Stop</button>
+            <button id="resetBtn" class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded transition">Reset</button>
+        </div>
+        <div id="lap-container" class="mt-4">
+            <div class="flex justify-between items-center mb-2">
+                <div id="lap-time" class="text-2xl font-mono text-gray-700">00:00:00.000</div>
+                <div class="space-x-2">
+                    <button id="lapBtn" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded transition">Lap</button>
+                    <button id="clearBtn" class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-1 px-3 rounded transition">Clear</button>
+                </div>
+            </div>
+            <div id="lap-list" class="max-h-40 overflow-y-auto">
+                <ul id="laps" class="list-decimal list-inside text-gray-600"></ul>
+            </div>
+        </div>
+    </div>
+  
+</body>
+<script src="./main.js"></script>
+</html>
